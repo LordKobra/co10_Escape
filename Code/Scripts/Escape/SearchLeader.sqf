@@ -267,11 +267,11 @@ while {true} do {
 					
 					if(isNil("A3E_Param_Artillery")) then {
 						diag_log "Warning: A3E_Param_Artillery was nil!";
-						A3E_Param_Artillery = 1;
+						A3E_Param_Artillery = 100;
 					};
 					private["_artilleryTimeThreshold","_artilleryCooldown"];
-					_artilleryTimeThreshold = a3e_var_artilleryTimeThreshold/A3E_Param_Artillery;
-					_artilleryCooldown = a3e_var_artillery_cooldown/A3E_Param_Artillery;
+					_artilleryTimeThreshold = a3e_var_artilleryTimeThreshold/(A3E_Param_Artillery/100.0);
+					_artilleryCooldown = a3e_var_artillery_cooldown/(A3E_Param_Artillery/100.0);
 					
 					if((diag_tickTime-_firstsight)>=_artilleryTimeThreshold && (diag_tickTime > (_artilleryCooldown+_lastArtilleryStrike))) then {
 						if(random 100 < a3e_var_artillery_chance) then {

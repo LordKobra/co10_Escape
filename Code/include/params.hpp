@@ -159,10 +159,10 @@ class Params
 	class A3E_Param_Artillery
 	{
 		title="Artillery";
-		values[]={0.25,0.5,1,2};
+		values[]={25,50,100,200};
 		texts[]={"Minimal","Reduced","Default","Death in fire"};
 		livechanges = 1;
-		default = 0.25;
+		default = 25;
 	};
 	class A3E_Param_War_Torn
 	{

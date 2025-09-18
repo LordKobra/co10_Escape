@@ -16,8 +16,8 @@ if(isNil("A3E_MortarSiteCountMax")) then {
 if(isNil("A3E_MortarSiteCountMin")) then {
 	A3E_MortarSiteCountMin = 4;
 };
-A3E_MortarSiteCountMin = A3E_MortarSiteCountMin * A3E_Param_Artillery;
-A3E_MortarSiteCountMax = A3E_MortarSiteCountMax * A3E_Param_Artillery;
+A3E_MortarSiteCountMin = A3E_MortarSiteCountMin * (A3E_Param_Artillery/100.0);
+A3E_MortarSiteCountMax = A3E_MortarSiteCountMax * (A3E_Param_Artillery/100.0);
 private _mortarSiteCount = A3E_MortarSiteCountMin + random (A3E_MortarSiteCountMax-A3E_MortarSiteCountMin);
 
 _regionCount = ceil(_mortarSiteCount/4);
