@@ -27,6 +27,8 @@ removeBackpack player;
 removeVest player;
 removeHeadgear player;
 removeGoggles player;
+player linkItem "ItemCompass";
+player linkItem "ItemRadio";
 if(hmd player != "") then {
 	private _hmd = hmd player;
 	player unlinkItem _hmd;

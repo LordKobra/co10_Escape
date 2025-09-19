@@ -36,7 +36,7 @@ class Params
 		values[]={2,4,6,8,-1,-2,-3};
 		texts[]={"Few (2-3)", "Some (3-5)", "Large (5-7)", "Max (7-9)","Players 1:0.5","Players 1:1","Players 1:1.5"};
 		livechanges = 1;
-		default = -2;
+		default = -3;
 	};
 	class A3E_Param_EnemySpawnDistance
 	{
@@ -58,7 +58,7 @@ class Params
 		title="Search Chopper Type";
 		values[]={0,1,2};
 		texts[]={"Random (Chooses between Easy and Hard Values)","Easy","Hard"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_Spacer2
     {
@@ -78,11 +78,11 @@ class Params
 	class A3E_Param_TimeMultiplier	
 	{	
 	    title="Time Multiplier (Fasttime)";
-		values[]={1,6,12,24,36};
-		texts[]={"1:1 (Normal)","1:6 (Day = 4 Hours)","1:12 (Day = 2 Hours)","1:24 (Day = 1 Hour)","1:36 (Day = 40 Minutes)"};
+		values[]={1,2,3,6,12,24,36};
+		texts[]={"1:1 (Normal)","1:2 (Day = 12 Hours)","1:3 (Day = 8 Hours)","1:6 (Day = 4 Hours)","1:12 (Day = 2 Hours)","1:24 (Day = 1 Hour)","1:36 (Day = 40 Minutes)"};
 		livechanges = 1;
 		code = "if(isserver) then {setTimeMultiplier _this;};";
-		default = 6;
+		default = 1;
 	};
 	class A3E_Param_WeatherOvercast
 	{
@@ -159,17 +159,17 @@ class Params
 	class A3E_Param_Artillery
 	{
 		title="Artillery";
-		values[]={0.5,1,2};
-		texts[]={"Reduced","Default","Death in fire"};
+		values[]={25,50,100,200};
+		texts[]={"Minimal","Reduced","Default","Death in fire"};
 		livechanges = 1;
-		default = 1;
+		default = 25;
 	};
 	class A3E_Param_War_Torn
 	{
 		title="War-Torn mode (CSAT and AAF are fighting each other)";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_ReviveView
 	{
@@ -283,7 +283,7 @@ class Params
 		title="Mag repack";
 		values[]={0,1};
 		texts[]={"Disabled", "Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_Spacer7
     {

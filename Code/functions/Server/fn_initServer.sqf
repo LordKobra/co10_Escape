@@ -471,6 +471,9 @@ call A3E_fnc_InitTraps;
 		_backpack addMagazineCargoGlobal[(_weapon select 1),3];
 	};
 
+	_backpack addItemCargoGlobal["ItemRadio",3];
+	_backpack addItemCargoGlobal["FirstAidKit",2];
+
     // Spawn more guards
     _marker = createMarker ["drn_guardAreaMarker", _startPos];
     _marker setMarkerShape "ELLIPSE";
