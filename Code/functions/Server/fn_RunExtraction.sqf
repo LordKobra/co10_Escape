@@ -125,9 +125,30 @@ sleep 10;
 ["Task complete: Rendesvouz with allied forces."] call drn_fnc_CL_ShowTitleTextAllClients;
 A3E_Task_Exfil_Complete = true;
 publicvariable "A3E_Task_Exfil_Complete";
-sleep 35;
 
-if({vehicle _x == _boat1 || vehicle _x == _boat2} count (call A3E_fnc_GetPlayers) == count (call A3E_fnc_GetPlayers)) then {
+private _escapeSuccess = false;
+while(true) {
+	sleep 4;
+	if ((!(alive _boat1) && !(alive _boat2))) then {
+		break; // We lost our escape vehicles!
+	};
+	// Check if escape vehicles made it for at least 300 meters
+	private _distReq = 300;
+	private _boat1Distant = (_distReq < (vectorMagnitude ((getPos _boat1) vectorDiff (getMarkerPos _extractionMarkerName))));
+	private _boat2Distant = (_distReq < (vectorMagnitude ((getPos _boat2) vectorDiff (getMarkerPos _extractionMarkerName))));
+	private _countBoat1 = ({vehicle _x == _boat1} count (call A3E_fnc_GetPlayers));
+	private _countBoat2 = ({vehicle _x == _boat2} count (call A3E_fnc_GetPlayers));
+	private _onBoard = ((_countBoat1 + _countBoat2) == count (call A3E_fnc_GetPlayers));
+	private _allDistant = (((_countBoat1 == 0) || _boat1Distant) && ((_countBoat2 == 0) || _boat2Distant));
+	if (_onBoard && _allDistant) then {
+		_escapeSuccess = true; // Hurray!
+		break;
+	};
+};
+
+sleep 5;
+
+if(_escapeSuccess) then {
 	a3e_var_Escape_MissionComplete = true;
 	publicVariable "a3e_var_Escape_MissionComplete";
 } else {
