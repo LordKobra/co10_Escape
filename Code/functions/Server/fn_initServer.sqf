@@ -578,7 +578,8 @@ call A3E_fnc_InitTraps;
 
         } foreach units _guardGroup;
 
-        [_guardGroup, _marker] spawn A3E_fnc_Patrol;
+		// Ignore setting patrol to avoid AI from wandering into prison and triggering escape prematurely
+        //[_guardGroup, _marker] spawn A3E_fnc_Patrol;
 
     } foreach _guardGroups;
 
