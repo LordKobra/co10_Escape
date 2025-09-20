@@ -31,6 +31,7 @@ _group = [_vehicle, _side, _unitTypes, _enemyFrequency] call drn_fnc_Escape_Popu
 
 {
     _x call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;    
+    [_x] joinSilent _group;
 } foreach units _group;
 
 if (_debug) then {
