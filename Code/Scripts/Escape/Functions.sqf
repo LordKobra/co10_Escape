@@ -406,6 +406,7 @@ drn_fnc_Escape_AddRemoveComCenArmor = {
             
             {
                 _x call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;
+                [_x] joinSilent _group;
             } foreach _crew;
             
             _waypoint = _group addWaypoint [_pos, 70];

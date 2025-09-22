@@ -55,6 +55,7 @@ _firstGroup = true;
         _soldier setDamage _damage;
 //		[_soldier, a3e_var_Escape_enemyMinSkill] call EGG_EVO_skill;
 		_soldier call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;
+        [_soldier] joinSilent _group; 
 		
         if (_groupMemberCount == 0) then {
 			_soldier setUnitRank "SERGEANT";

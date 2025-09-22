@@ -33,6 +33,7 @@ for [{_i=0},{_i<=_groups},{_i=_i+1}] do {
 
 	{
 		 _x call drn_fnc_Escape_OnSpawnGeneralSoldierUnit;
+		 [_x] joinSilent _group;
 	} foreach _crew;
 	_script = [_group, _markerName] spawn A3E_fnc_AquaticPatrol;
 
