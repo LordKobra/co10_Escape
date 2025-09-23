@@ -85,7 +85,7 @@ if(count(_possibleVehicles) > 0) then {
 };
 
 private _statics = _templatePositions getordefault ["statics",[]];
-if(count(a3e_arr_ComCenStaticWeapons) > 0) then {
+if(count a3e_arr_ComCenStaticWeapons > 0) then {
 	{
 		_x params ["_type","_realPos","_dir","_init"];
 		private _gun = selectRandom a3e_arr_ComCenStaticWeapons;
@@ -97,7 +97,7 @@ if(count(a3e_arr_ComCenStaticWeapons) > 0) then {
 		[_static] call a3e_fnc_onVehicleSpawn;
 		[group _unit] call a3e_fnc_onEnemyGroupSpawn;
 		[_unit] call a3e_fnc_onEnemySoldierSpawn;
-		[_unit] joinSilent _group; // Ensure the spawned Unit knows what side they're on
+		// [_unit] joinSilent _group; // already joined group during A3E_fnc_AddStaticGunner
 		_groups pushback (group _unit);
 	} foreach _statics;
 };
