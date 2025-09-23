@@ -1,6 +1,6 @@
 if (!isServer) exitWith {};
 
-params["_extractionPointNo",["_isWater",false]];
+params["_extractionPointNo", ["_isWater", false]];
 
 private _extraction = (A3E_ExtractionPositions select {_x select 0 == _extractionPointNo}) select 0;
 
@@ -67,7 +67,7 @@ _heloGuard = {
 	params["_heli"];
 	sleep 6;
 	private _msg = ["We are taking damage!","Under fire!","We are under fire!","Taking damage!","I thought the landing zone was safe!"];
-	waituntil{sleep 0.5;((getDammage _heli)>0.1)};
+	waituntil{sleep 0.5;(damage _heli > 0.1)};
 	if(alive (driver _heli)) then {
 		[driver _heli,selectRandom _msg] remoteExec ["sideChat",0,false];
 	};
@@ -99,11 +99,11 @@ sleep 1;
 
 
 // Verkar inte funka...
-(driver _boat1) action ["LightOff", _boat1];
-(driver _boat2) action ["LightOff", _boat2];
+driver _boat1 action ["LightOff", _boat1];
+driver _boat2 action ["LightOff", _boat2];
 
 
-while {{(_x in  _boat1) || (_x in _boat2)} count (call A3E_fnc_GetPlayers) != count(call A3E_fnc_GetPlayers)} do {
+while {{_x in _boat1 || _x in _boat2} count call A3E_fnc_GetPlayers != count(call A3E_fnc_GetPlayers)} do {
 	sleep 1;
 };
 _boat1 setvariable ["State","Evac"];
@@ -127,28 +127,29 @@ A3E_Task_Exfil_Complete = true;
 publicvariable "A3E_Task_Exfil_Complete";
 
 private _escapeSuccess = false;
-while(true) {
+
+while {true} do {
 	sleep 4;
-	if ((!(alive _boat1) && !(alive _boat2))) then {
+	if (!(alive _boat1) && !(alive _boat2)) then {
 		break; // We lost our escape vehicles!
 	};
 	// Check if escape vehicles made it for at least 300 meters
 	private _distReq = 300;
 	private _boat1Distant = (_distReq < (vectorMagnitude ((getPos _boat1) vectorDiff (getMarkerPos _extractionMarkerName))));
 	private _boat2Distant = (_distReq < (vectorMagnitude ((getPos _boat2) vectorDiff (getMarkerPos _extractionMarkerName))));
-	private _countBoat1 = ({vehicle _x == _boat1} count (call A3E_fnc_GetPlayers));
-	private _countBoat2 = ({vehicle _x == _boat2} count (call A3E_fnc_GetPlayers));
-	private _onBoard = ((_countBoat1 + _countBoat2) == count (call A3E_fnc_GetPlayers));
-	private _allDistant = (((_countBoat1 == 0) || _boat1Distant) && ((_countBoat2 == 0) || _boat2Distant));
+	private _countBoat1 = ({vehicle _x == _boat1} count call A3E_fnc_GetPlayers);
+	private _countBoat2 = ({vehicle _x == _boat2} count call A3E_fnc_GetPlayers);
+	private _onBoard = (_countBoat1 + _countBoat2 == count (call A3E_fnc_GetPlayers));
+	private _allDistant = ((_countBoat1 == 0 || _boat1Distant) && (_countBoat2 == 0 || _boat2Distant));
 	if (_onBoard && _allDistant) then {
-		_escapeSuccess = true; // Hurray!
+		_escapeSuccess  = true; // Hurray!
 		break;
 	};
 };
 
 sleep 5;
 
-if(_escapeSuccess) then {
+if _escapeSuccess then {
 	a3e_var_Escape_MissionComplete = true;
 	publicVariable "a3e_var_Escape_MissionComplete";
 } else {
