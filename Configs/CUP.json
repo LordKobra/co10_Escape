@@ -16,7 +16,7 @@
 					"PLAYERUNIT_5" : "CUP_B_GER_Soldier_GL",
 					"PLAYERUNIT_6" : "CUP_B_Ger_Soldier_MG",
 					"PLAYERUNIT_7" : "CUP_B_GER_Soldier_AT",
-					"PLAYERUNIT_8" : "CUP_B_GER_Soldier",
+					"PLAYERUNIT_8" : "CUP_B_GER_Medic",
 					"PLAYERUNIT_9" : "CUP_B_GER_Soldier_Sniper",
 					"PLAYERUNIT_10" : "CUP_B_GER_Medic"
 				}
@@ -36,7 +36,7 @@
 					"PLAYERUNIT_5" : "CUP_B_USMC_Soldier_GL",
 					"PLAYERUNIT_6" : "CUP_B_USMC_Soldier_MG",
 					"PLAYERUNIT_7" : "CUP_B_USMC_Soldier_AT",
-					"PLAYERUNIT_8" : "CUP_B_USMC_Soldier",
+					"PLAYERUNIT_8" : "CUP_B_USMC_Medic",
 					"PLAYERUNIT_9" : "CUP_B_USMC_Soldier_Marksman",
 					"PLAYERUNIT_10" : "CUP_B_USMC_Medic",
 					"PLAYER_INIT" : "this setCaptive true; if(this == p2) then {this setUnitTrait ['UavHacker',true];};"
@@ -57,7 +57,7 @@
 					"PLAYERUNIT_5" : "CUP_B_USMC_Soldier_GL",
 					"PLAYERUNIT_6" : "CUP_B_USMC_Soldier_MG",
 					"PLAYERUNIT_7" : "CUP_B_USMC_Soldier_AT",
-					"PLAYERUNIT_8" : "CUP_B_USMC_Soldier",
+					"PLAYERUNIT_8" : "CUP_B_USMC_Medic",
 					"PLAYERUNIT_9" : "CUP_B_USMC_Soldier_Marksman",
 					"PLAYERUNIT_10" : "CUP_B_USMC_Medic",
 					"PLAYER_INIT" : "this setCaptive true; if(this == p2) then {this setUnitTrait ['UavHacker',true];};"
@@ -78,7 +78,7 @@
 					"PLAYERUNIT_5" : "CUP_O_sla_Soldier_GL",
 					"PLAYERUNIT_6" : "CUP_O_sla_Soldier_MG",
 					"PLAYERUNIT_7" : "CUP_O_sla_Soldier_AT",
-					"PLAYERUNIT_8" : "CUP_O_sla_Soldier",
+					"PLAYERUNIT_8" : "CUP_O_sla_Medic",
 					"PLAYERUNIT_9" : "CUP_O_sla_Sniper",
 					"PLAYERUNIT_10" : "CUP_O_sla_Medic"
 				}
@@ -98,7 +98,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RUS_M_Soldier_GL_VKPO_Desert",
 					"PLAYERUNIT_6" : "CUP_O_RUS_M_Soldier_AR_VKPO_Desert",
 					"PLAYERUNIT_7" : "CUP_O_RUS_M_Soldier_AT_VKPO_Desert",
-					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_VKPO_Desert",
+					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert",
 					"PLAYERUNIT_9" : "CUP_O_RUS_M_Soldier_Marksman_VKPO_Desert",
 					"PLAYERUNIT_10" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert"
 				}
@@ -118,7 +118,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RUS_M_Soldier_GL_VKPO_Desert",
 					"PLAYERUNIT_6" : "CUP_O_RUS_M_Soldier_AR_VKPO_Desert",
 					"PLAYERUNIT_7" : "CUP_O_RUS_M_Soldier_AT_VKPO_Desert",
-					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_VKPO_Desert",
+					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert",
 					"PLAYERUNIT_9" : "CUP_O_RUS_M_Soldier_Marksman_VKPO_Desert",
 					"PLAYERUNIT_10" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert"
 				}
@@ -138,7 +138,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RU_Soldier_GL_EMR",
 					"PLAYERUNIT_6" : "CUP_O_RU_Soldier_MG_EMR",
 					"PLAYERUNIT_7" : "CUP_O_RU_Soldier_AT_EMR",
-					"PLAYERUNIT_8" : "CUP_O_RU_Soldier_EMR",
+					"PLAYERUNIT_8" : "CUP_O_RU_Medic_EMR",
 					"PLAYERUNIT_9" : "CUP_O_RU_Soldier_Marksman_EMR",
 					"PLAYERUNIT_10" : "CUP_O_RU_Medic_EMR"
 				}
@@ -158,7 +158,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RU_Soldier_GL_Ratnik_Winter",
 					"PLAYERUNIT_6" : "CUP_O_RU_Soldier_MG_Ratnik_Winter",
 					"PLAYERUNIT_7" : "CUP_O_RU_Soldier_AT_Ratnik_Winter",
-					"PLAYERUNIT_8" : "CUP_O_RU_Soldier_Ratnik_Winter",
+					"PLAYERUNIT_8" : "CUP_O_RU_Soldier_Medic_Ratnik_Winter",
 					"PLAYERUNIT_9" : "CUP_O_RU_Soldier_Marksman_Ratnik_Winter",
 					"PLAYERUNIT_10" : "CUP_O_RU_Soldier_Medic_Ratnik_Winter"
 				}
@@ -178,7 +178,7 @@
 					"PLAYERUNIT_5" : "CUP_B_AFU_Soldier_Grenadier",
 					"PLAYERUNIT_6" : "CUP_B_AFU_Soldier_Autorifleman",
 					"PLAYERUNIT_7" : "CUP_B_AFU_Soldier_ATSpecialist",
-					"PLAYERUNIT_8" : "CUP_B_AFU_Soldier_Rifleman",
+					"PLAYERUNIT_8" : "CUP_B_AFU_Soldier_Medic",
 					"PLAYERUNIT_9" : "CUP_B_AFU_Soldier_Marksman",
 					"PLAYERUNIT_10" : "CUP_B_AFU_Soldier_Medic"
 				}
@@ -198,7 +198,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RU_Soldier_GL_EMR",
 					"PLAYERUNIT_6" : "CUP_O_RU_Soldier_MG_EMR",
 					"PLAYERUNIT_7" : "CUP_O_RU_Soldier_AT_EMR",
-					"PLAYERUNIT_8" : "CUP_O_RU_Soldier_EMR",
+					"PLAYERUNIT_8" : "CUP_O_RU_Medic_EMR",
 					"PLAYERUNIT_9" : "CUP_O_RU_Soldier_Marksman_EMR",
 					"PLAYERUNIT_10" : "CUP_O_RU_Medic_EMR"
 				}
@@ -218,7 +218,7 @@
 					"PLAYERUNIT_5" : "CUP_O_RUS_M_Soldier_GL_VKPO_Desert",
 					"PLAYERUNIT_6" : "CUP_O_RUS_M_Soldier_AR_VKPO_Desert",
 					"PLAYERUNIT_7" : "CUP_O_RUS_M_Soldier_AT_VKPO_Desert",
-					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_VKPO_Desert",
+					"PLAYERUNIT_8" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert",
 					"PLAYERUNIT_9" : "CUP_O_RUS_M_Soldier_Marksman_VKPO_Desert",
 					"PLAYERUNIT_10" : "CUP_O_RUS_M_Soldier_Medic_VKPO_Desert"
 				}
@@ -238,7 +238,7 @@
 					"PLAYERUNIT_5" : "CUP_O_sla_Soldier_GL",
 					"PLAYERUNIT_6" : "CUP_O_sla_Soldier_MG",
 					"PLAYERUNIT_7" : "CUP_O_sla_Soldier_AT",
-					"PLAYERUNIT_8" : "CUP_O_sla_Soldier",
+					"PLAYERUNIT_8" : "CUP_O_sla_Medic",
 					"PLAYERUNIT_9" : "CUP_O_sla_Sniper",
 					"PLAYERUNIT_10" : "CUP_O_sla_Medic"
 				}
