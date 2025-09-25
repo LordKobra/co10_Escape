@@ -41,10 +41,17 @@ if (random 100 < 20) then {
 
 	private _weaponItem = selectRandom a3e_arr_CivilianCarWeapons;
 	if !(isNil "_weaponItem") then {
-		_vehicle addWeaponCargoGlobal [_weaponItem select 0, 1];
-		if(typeName (_weaponItem select 1) == typeName "") then {
-			_vehicle addMagazineCargoGlobal [_weaponItem select 1, _weaponItem select 2];
-		}
+		private _weaponName = _weaponItem select 0;
+		if(typeName _weaponName == "STRING") then {
+			_vehicle addWeaponCargoGlobal [_weaponName, 1];
+		};
+
+		private _magazineName = _weaponItem select 1;
+		private _magazineCount = _weaponItem select 2;
+		if(typeName _magazineName == "STRING" 
+			&& typeName _magazineCount == "SCALAR") then {
+			_vehicle addMagazineCargoGlobal [_magazineName, _magazineCount];
+		};
 	}
 };
 
