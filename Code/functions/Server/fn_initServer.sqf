@@ -47,6 +47,12 @@ if (isClass(configFile >> "CfgPatches" >> "ACE_Medical")) then {
 };
 publicVariable "ACE_MedicalServer";
 
+// DUI Squad Radar Unconscious Tracking
+if (isClass(configFile >> "CfgPatches" >> "diwako_dui_main")) then {
+	missionNamespace setVariable ["diwako_dui_special_track", [], true];
+	[] execVM "Scripts\DUI\fn_trackUnconscious.sqf";
+};
+
 //Load Statistics
 [] spawn A3E_fnc_LoadStatistics;
 
